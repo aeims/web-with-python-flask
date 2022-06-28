@@ -1,0 +1,14 @@
+<!-- explanation about here is in readme.md -->
+
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+{% block content %}
+<div class="home-page-div">
+    <h1 align="center">Welcome! you can make notes here by signing up</h1>
+    <br>
+    <label for="login-btn">click here to <i>Login</i> and manage your noets</label>
+    <a href="/login" id="login-btn">login</a>
+    <br>
+    <label for="sign-up-btn">click here to <i>Sign Up</i> and start making notes</label>
+    <a class="active" href="/sign-up" id="sign-up-btn">sign up</a>
+</div>
+{% endblock %}

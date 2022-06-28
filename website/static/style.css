@@ -1,0 +1,40 @@
+i {
+    color: rgb(168, 15, 99);
+}
+
+.home-page-div {
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-page-div label {
+    font-size: 24px;
+}
+
+.home-page-div a {
+    text-decoration: none;
+    color: rgb(219, 116, 219);
+    background-color: white;
+    border: rgb(219, 116, 219) 2px solid;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+a.active {
+    background-color: rgb(219, 116, 219);
+    color: white;
+}
+
+.home-page-div a:hover {
+    border-color: white;
+    background-color: rgb(219, 116, 219);
+    color: white;
+    opacity: 0.8;
+}
+
