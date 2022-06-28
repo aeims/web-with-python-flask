@@ -25,4 +25,4 @@ Go to `http://127.0.0.1:5000`
 ## about jinja in templates directory
 all files here are using the base.html template and we are adding content by defining a block called content inside base template
 for accesing a variable we need  to use this syntax -> {{var}}
-for adding content we will use -> {% %}
+for adding content and expression we will use -> {% %}
