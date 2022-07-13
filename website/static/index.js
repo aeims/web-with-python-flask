@@ -9,6 +9,18 @@ function deleteNote(noteId) {
     method: "POST",
     body: JSON.stringify({ noteId: noteId }),
   }).then((_res) => {
-    window.location.href = "/notes";
+    // window.location.href = "/notes";
+    let url = location.href;
+    window.location.href = url;
+  });
+}
+
+function favNote(noteId) {
+  fetch("/fav-this-note", {
+    method: "POST",
+    body: JSON.stringify({noteId: noteId}),
+  }).then((_res) => {
+    let url = location.href;
+    window.location.href = url;
   });
 }

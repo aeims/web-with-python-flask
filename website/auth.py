@@ -27,7 +27,7 @@ def login():
                 flash('Incorrect password, try again.', category='error')
         else:
             flash('Email does not exist.', category='error')
-            flash('', category='info')
+            flash('Create an account now by clicking here!', category='info')
 
     return render_template("login.html", user=current_user)
 

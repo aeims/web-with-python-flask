@@ -1,10 +1,10 @@
-{% extends "base.html" %} {% block title %}Notes{% endblock %} 
+{% extends "base.html" %} {% block title %}Favorite Notes{% endblock %} 
 {% block content %}
 <br>
-<h1 align="center">Notes</h1>
-<h5>Start taking a Note!</h5>
-<ul class="list-group list-group-flush" id="ulnotes">
+<h1 align="center">Favorite Notes</h1>
+<ul class="list-group list-group-flush" id="ulfavnotes">
   {% for note in user.notes %}
+  {% if note.is_fav %}
   <li class="list-group-item">
     {{ note.data }}
     <button type="button" class="close" onclick="favNote({{ note.id }})">
@@ -21,13 +21,7 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
-<form method="POST">
-  <textarea name="note" id="note" class="form-control"></textarea>
-  <br />
-  <div align="center">
-    <button type="submit" class="btn btn-primary">Add Note</button>
-  </div>
-</form>
 {% endblock %}
