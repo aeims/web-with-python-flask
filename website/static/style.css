@@ -26,9 +26,9 @@ i {
     transition-duration: 0.4s;
 }
 
-a.active {
-    background-color: rgb(219, 116, 219);
-    color: white;
+.active {
+    background-color: rgb(219, 116, 219) !important;
+    color: white !important;
 }
 
 .home-page-div a:hover {
