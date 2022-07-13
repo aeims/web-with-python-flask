@@ -59,9 +59,10 @@ def fav_note():
         if note.user_id == current_user.id:
             if note.is_fav:
                 note.is_fav = False
+                flash('Note deleted from Favorites!', category='error')
             else:
                 note.is_fav = True 
+                flash('Note is in Favorites now!', category='success')
             db.session.commit()
-            flash('Note is in Favorites now!', category='success')
-
+            
     return jsonify({})
